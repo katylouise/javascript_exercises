@@ -1,17 +1,1 @@
-// if (!Function.prototype.bind) {
-  Function.prototype.bind = function(obj) {
-    var fToBind = this;
-    return fToBind.apply(obj);
-  }
-//
-
-var Hero = {
-  hitPoints: 100,
-  getLife: function() {
-    return this.hitPoints;
-  }
-};
-
-var LinksLife = Hero.getLife.bind(Hero);
-
-console.log(LinksLife());
+// Not sure how to create a shim for bind.  I looked at the docs on the MDN and they have a polyfill for bind, but I'm uncertain about how to create my own version.
